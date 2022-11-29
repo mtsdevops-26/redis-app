@@ -12,4 +12,13 @@ pipeline{
             sh 'docker-compose up'
         }
       }
+      stage('sleep container')
+      steps{
+        sh 'sleep 10'
+      }
+        stage('teste app')
+      steps{
+        sh 'teste-app.sh' 
+    }    
+
 }
